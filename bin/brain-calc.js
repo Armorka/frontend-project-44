@@ -1,14 +1,15 @@
-import game from '../src/cli.js';
 import readlineSync from 'readline-sync';
+import game from '../src/cli.js';
+import getRandomNumber from '../src/math.js';
 
 const name = game();
 const BrainCalc = () => {
   console.log('What is the result of the expression?');
   for (let i = 0; i <= 2; i += 1) {
-    const random1 = Math.floor(Math.random() * 100);
-    const random2 = Math.floor(Math.random() * 100);
+    const random1 = getRandomNumber();
+    const random2 = getRandomNumber();
     const sign = '+-*';
-    const randomsign = Math.floor(Math.random() * sign.length);
+    const randomsign = getRandomNumber(0, sign.length - 1);
     const randsign = sign[randomsign];
     let TrueOtvet;
     console.log(`Question: ${random1} ${randsign} ${random2}`);
