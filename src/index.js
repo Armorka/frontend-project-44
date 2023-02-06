@@ -7,11 +7,12 @@ const logika = (otvet, TrueOtvet, i) => {
   } else {
     console.log(`'${otvet}' is wrong answer ;(. Correct answer was '${TrueOtvet}'.`);
     console.log(`Let's try again, ${name}!`);
-    return i + 5;
+    return false;
   }
   if (i === 2) {
     console.log(`Congratulations, ${name}!`);
   }
+  return true;
 };
 
 export default logika;

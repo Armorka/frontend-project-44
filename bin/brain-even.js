@@ -10,7 +10,7 @@ const BrainEven = () => {
     const otvet = readlineSync.question('Your answer: ');
     const quest = random1 % 2 === 0 ? 'yes' : 'no';
     const attempt = logika(otvet, quest, i);
-    if (attempt > 3) {
+    if (!attempt) {
       break;
     }
   }
