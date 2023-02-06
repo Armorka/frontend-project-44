@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-const game = () => {
-    console.log('Welcome to the Brain Games!')
-};
+import game from '../src/cli.js';
 
-game()
+game();
