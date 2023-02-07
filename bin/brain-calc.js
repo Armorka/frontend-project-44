@@ -1,8 +1,7 @@
 import readlineSync from 'readline-sync';
-import game from '../src/cli.js';
 import getRandomNumber from '../src/math.js';
+import logika from '../src/index.js';
 
-const name = game();
 const BrainCalc = () => {
   console.log('What is the result of the expression?');
   for (let i = 0; i <= 2; i += 1) {
@@ -23,15 +22,9 @@ const BrainCalc = () => {
     if (randsign === '*') {
       TrueOtvet = String(random1 * random2);
     }
-    if (otvet === TrueOtvet) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${otvet}' is wrong answer ;(. Correct answer was '${TrueOtvet}'.`);
-      console.log(`Let's try again, ${name}!`);
+    const attempt = logika(otvet, TrueOtvet, i);
+    if (!attempt) {
       break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${name}!`);
     }
   }
 };
