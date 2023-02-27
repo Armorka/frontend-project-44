@@ -1,11 +1,11 @@
-import getRandomNumber from "./math.js";
+import getRandomNumber from './math.js';
 
 const getResult = (a) => {
-  let result = [];
+  const result = [];
   const twomass = [];
-  let two = getRandomNumber(1, 10);
+  const two = getRandomNumber(1, 10);
   for (let i = 0; i < 10; i += 1) {
-    a = a + two;
+    a += two;
     result.push(a);
   }
   result[getRandomNumber(1, 10)] = '..';
