@@ -1,12 +1,14 @@
 const getDivisor = (a, b) => {
-  while (a !== b) {
-    if (a > b) {
-      a -= b;
+  let one = a;
+  let two = b;
+  while (one !== two) {
+    if (one > two) {
+      one -= two;
     } else {
-      b -= a;
+      two -= one;
     }
   }
-  return a;
+  return one;
 };
 
 export default getDivisor;
