@@ -11,9 +11,9 @@ Node.js v13 or higher
 
 ### Installation
 
-  git clone https://github.com/Armorka/frontend-project-45.git
-  cd frontend-project-45
-  make install
+* git clone https://github.com/Armorka/frontend-project-45.git
+*  cd frontend-project-45
+*  make install
 
 ## Rules
 
